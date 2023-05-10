@@ -1,5 +1,5 @@
-import React from 'react'
-import { View, Text, StyleSheet, Image, Button, TouchableOpacity } from 'react-native'
+import React, { useMemo } from 'react'
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 
 const Card = ({ url, id, like, handleLike, handleDislike }) => {
 

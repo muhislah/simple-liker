@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import jsonData from '../assets/data.json'
 import { SafeAreaView, ScrollView, View, Text, StyleSheet, Pressable, TouchableHighlight, TouchableOpacity } from 'react-native'
 import Card from '../components/module/Card'
@@ -12,7 +12,7 @@ const Home = () => {
                 if (data.id === id) {
                     return {
                         ...data,
-                        like: data.like++
+                        like: data.like + 1
                     }
                 } else {
                     return data
@@ -29,7 +29,7 @@ const Home = () => {
                 if (data.id === id) {
                     return {
                         ...data,
-                        like: data.like--
+                        like: data.like - 1
                     }
                 } else {
                     return data
@@ -54,7 +54,7 @@ const Home = () => {
         const newData = data.map((data) => {
             return {
                 ...data,
-                like: data.like++
+                like: data.like + 1
             }
         })
         setData(newData)
@@ -64,11 +64,37 @@ const Home = () => {
         const newData = data.map((data) => {
             return {
                 ...data,
-                like: data.like--
+                like: data.like - 1
             }
         })
         setData(newData)
     }
+    
+    const renderCard = useMemo(() => {
+        if (data && data.length) {
+            return (
+                data.map((data) => {
+                    return (
+                        <Card
+                            key={data.id}
+                            url={data.url}
+                            id={data.id}
+                            handleLike={handleLike}
+                            handleDislike={handleDislike}
+                            like={data.like}
+                        />
+                    )
+                })
+            )
+        } else {
+            return null
+        }
+    }, [data])
+
+
+    useEffect(() => {
+        console.log('data changes')
+    }, [data])
 
     return (
         <SafeAreaView>
@@ -85,21 +111,7 @@ const Home = () => {
                             <Text style={{ color: 'white' }}>Dislike All</Text>
                         </TouchableOpacity>
                     </View>
-                    {
-                        data && data.length ?
-                            data.map((data) => {
-                                return (
-                                    <Card
-                                        key={data.id}
-                                        url={data.url}
-                                        id={data.id}
-                                        handleLike={handleLike}
-                                        handleDislike={handleDislike}
-                                        like={data.like}
-                                    />
-                                )
-                            }) : null
-                    }
+                    {renderCard}
                 </View>
             </ScrollView>
         </SafeAreaView>
