@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "simple-liker",
+    "slug": "simple-liker",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "simple-liker"
+}
