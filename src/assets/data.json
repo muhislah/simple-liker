@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "Sunset Beach",
+      "url": "https://picsum.photos/400/300/?image=1060",
+      "like": 0
+    },
+    {
+      "id": 2,
+      "name": "Mountain Landscape",
+      "url": "https://picsum.photos/400/300/?image=1023",
+      "like": 0
+    },
+    {
+      "id": 3,
+      "name": "City Skyline",
+      "url": "https://picsum.photos/400/300/?image=1041",
+      "like": 0
+    },
+    {
+      "id": 4,
+      "name": "Nature Trail",
+      "url": "https://picsum.photos/400/300/?image=1025",
+      "like": 0
+    },
+    {
+      "id": 5,
+      "name": "Sailing Adventure",
+      "url": "https://picsum.photos/400/300/?image=1053",
+      "like": 0
+    },
+    {
+      "id": 6,
+      "name": "Golden Gate Bridge",
+      "url": "https://picsum.photos/400/300/?image=1036",
+      "like": 0
+    },
+    {
+      "id": 7,
+      "name": "Foggy Forest",
+      "url": "https://picsum.photos/400/300/?image=1045",
+      "like": 0
+    },
+    {
+      "id": 8,
+      "name": "Desert Road",
+      "url": "https://picsum.photos/400/300/?image=1076",
+      "like": 0
+    },
+    {
+      "id": 9,
+      "name": "Snowy Mountain",
+      "url": "https://picsum.photos/400/300/?image=1068",
+      "like": 0
+    },
+    {
+      "id": 10,
+      "name": "Countryside",
+      "url": "https://picsum.photos/400/300/?image=1064",
+      "like": 0
+    }
+  ]
+  
